@@ -5,19 +5,19 @@ metadata:
   annotations:
     flux.weave.works/automated: "true"
     flux.weave.works/tag.init: regexp:^3.*
-    flux.weave.works/tag.podinfod: semver:~1.4
+    flux.weave.works/tag.podinfod: semver:~1.5
   name: podinfo
   namespace: demo
 spec:
   template:
     spec:
       $setElementOrder/containers:
-      - name: podinfod
+        - name: podinfod
       $setElementOrder/initContainers:
-      - name: init
+        - name: init
       containers:
-      - image: stefanprodan/podinfo:1.4.4
-        name: podinfod
+        - image: stefanprodan/podinfo:1.4.4
+          name: podinfod
       initContainers:
-      - image: alpine:3
-        name: init
+        - image: alpine:3
+          name: init
