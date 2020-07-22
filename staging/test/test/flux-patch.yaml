@@ -12,12 +12,12 @@ spec:
   template:
     spec:
       $setElementOrder/containers:
-        - name: podinfod
+      - name: podinfod
       $setElementOrder/initContainers:
-        - name: init
+      - name: init
       containers:
-        - image: stefanprodan/podinfo:1.4.4
-          name: podinfod
+      - image: stefanprodan/podinfo:1.5.1
+        name: podinfod
       initContainers:
-        - image: alpine:3
-          name: init
+      - image: alpine:3
+        name: init
